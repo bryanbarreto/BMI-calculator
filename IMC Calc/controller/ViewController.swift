@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var calculatorBrain = CalculatorBrain()
 
     @IBOutlet weak var alturaText: UILabel!
     @IBOutlet weak var pesoText: UILabel!
@@ -29,9 +31,9 @@ class ViewController: UIViewController {
         let altura:Float = alturaSlider.value
         let peso:Float = pesoSlider.value
         
-        let bmi:Float = peso / (altura * altura)
+        calculatorBrain.calculateBmi(peso: peso, altura: altura)
         
-        print(bmi)
+        self.performSegue(withIdentifier: "goToResultScreen", sender: self)
     }
     
     override func viewDidLoad() {
@@ -39,6 +41,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "goToResultScreen"){
+            let resultViewController:ResultViewController = segue.destination as! ResultViewController
+            resultViewController.bmiValue = calculatorBrain.getBmiValue()
+            resultViewController.adviceMessage = calculatorBrain.getBmiAdviceMessage()
+            resultViewController.color = calculatorBrain.getBmiColor()
+         }
+    }
 }
 

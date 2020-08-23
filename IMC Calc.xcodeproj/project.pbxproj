@@ -13,6 +13,9 @@
 		C3DDB61324F1859100913301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DDB61124F1859000913301 /* Main.storyboard */; };
 		C3DDB61524F1859500913301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DDB61424F1859500913301 /* Assets.xcassets */; };
 		C3DDB61824F1859500913301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DDB61624F1859500913301 /* LaunchScreen.storyboard */; };
+		C3DDB62224F20E5500913301 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DDB62124F20E5500913301 /* ResultViewController.swift */; };
+		C3DDB62724F21B9000913301 /* BmiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DDB62624F21B9000913301 /* BmiModel.swift */; };
+		C3E95A2A24F2AD8600211CB8 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E95A2924F2AD8600211CB8 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C3DDB61424F1859500913301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3DDB61724F1859500913301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3DDB61924F1859500913301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3DDB62124F20E5500913301 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		C3DDB62624F21B9000913301 /* BmiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BmiModel.swift; sourceTree = "<group>"; };
+		C3E95A2924F2AD8600211CB8 /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		C3DDB60A24F1859000913301 /* IMC Calc */ = {
 			isa = PBXGroup;
 			children = (
+				C3DDB62524F21B5900913301 /* controller */,
+				C3DDB62424F21B5400913301 /* view */,
+				C3DDB62324F21B4E00913301 /* model */,
 				C3DDB60B24F1859000913301 /* AppDelegate.swift */,
 				C3DDB60D24F1859000913301 /* SceneDelegate.swift */,
-				C3DDB60F24F1859000913301 /* ViewController.swift */,
-				C3DDB61124F1859000913301 /* Main.storyboard */,
 				C3DDB61424F1859500913301 /* Assets.xcassets */,
-				C3DDB61624F1859500913301 /* LaunchScreen.storyboard */,
 				C3DDB61924F1859500913301 /* Info.plist */,
 			);
 			path = "IMC Calc";
+			sourceTree = "<group>";
+		};
+		C3DDB62324F21B4E00913301 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C3DDB62624F21B9000913301 /* BmiModel.swift */,
+				C3E95A2924F2AD8600211CB8 /* CalculatorBrain.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C3DDB62424F21B5400913301 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C3DDB61124F1859000913301 /* Main.storyboard */,
+				C3DDB61624F1859500913301 /* LaunchScreen.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		C3DDB62524F21B5900913301 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C3DDB60F24F1859000913301 /* ViewController.swift */,
+				C3DDB62124F20E5500913301 /* ResultViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E95A2A24F2AD8600211CB8 /* CalculatorBrain.swift in Sources */,
+				C3DDB62724F21B9000913301 /* BmiModel.swift in Sources */,
 				C3DDB61024F1859000913301 /* ViewController.swift in Sources */,
 				C3DDB60C24F1859000913301 /* AppDelegate.swift in Sources */,
 				C3DDB60E24F1859000913301 /* SceneDelegate.swift in Sources */,
+				C3DDB62224F20E5500913301 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
